@@ -5,6 +5,11 @@
     <title>Cat-energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
@@ -108,17 +113,20 @@
           </dl>
           <p class="example__expenses expenses">Затраты на питание: <span class="expenses__number">15 000 руб.</span></p>
         </div>
-        <div class="slider__wrapper">
-          <img class="slider__image-before" width="560" height="512" src="images/cat-before.jpg" alt="Кот с лишним весом.">
-          <img class="slider__image-after" width="560" height="512" src="images/cat-after.jpg" alt="Стройный кот.">
-          <div class="slider__controls">
-            <button class="slider__button slider__next" type="button">
-              <span class="visually-hidden">Предыдущее фото</span>
-            </button>
-            <button class="slider__button slider__prev" type="button">
-              <span class="visually-hidden">Следующее фото</span>
-            </button>
+        <div class="example__images">
+          <div class="example__image">
+            <picture>
+              <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-before@1x.png 1x, images/cat-before@2x.png 2x">
+              <img class="example__image-after" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png" width="280" height="256" alt="Толстый кот">
+            </picture>
           </div>
+          <div class="example__image">
+            <picture>
+              <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-after@1x.png 1x, images/cat-after@2x.png 2x">
+              <img class="example__image-after" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png" width="280" height="256" alt="Худой кот">
+            </picture>
+          </div>
+        </div>
         </div>
       </section>
 
