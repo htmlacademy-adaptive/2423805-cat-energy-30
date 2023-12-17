@@ -14,8 +14,11 @@
   <body class="page__body">
     <header class="main-header">
       <a class="main-header__logo logo" href="index.html">
-        <img class="logo__image" src="images/icons/logo-icon.svg" width="70" height="59" alt="Логотип сайта 'Cat energy'.">
-        <img class="logo__image" src="images/icons/logo-text.svg" width="118" height="21" alt="Текст сайта 'Cat energy'.">
+        <picture>
+          <source width="202" height="59" type="image/svg+xml" media="(min-width: 1200px)" srcset="images/logo-desktop.svg">
+          <source width="174" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+          <img class="logo__image" src="images/logo-mobile.svg" width="190" height="38" alt="Логотип сайта 'Cat energy'.">
+        </picture>
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle button-toggle" type="button">
@@ -49,6 +52,11 @@
         <p class="main-container__slogan">Занялся собой? Займись котом!</p>
         <a class="main-container__button" href="form.html">Подобрать программу</a>
       </div>
+      <picture>
+        <source type="image/png" width="552" height="499" media="(min-width: 1440px)" srcset="images/index-image-desktop@1x.png 1x, images/index-image-desktop@2x.png 2x">
+        <source type="image/png" width="709" height="609" media="(min-width: 768px)" srcset="images/index-image-tablet@1x.png 1x, images/index-image-tablet@2x.png 2x">
+        <img src="images/index-image-mobile@1x.png" srcset="images/index-image-mobile@2x.png" width="280" height="270" alt="Корм для кота 'Cat energy'.">
+      </picture>
       <section class="programs">
         <div class="programs__wrapper">
           <ul class="programs__list">
@@ -109,20 +117,23 @@
               <dt class="example__numeric">60 дней</dt>
               <dd class="example__description">Затрачено времени</dd>
             </div>
+            <div class="example__item">
+              <dt class="example__numeric">15 000 руб.</dt>
+              <dd class="example__description">Затраты на питание:</dd>
+            </div>
           </dl>
-          <p class="example__expenses expenses">Затраты на питание: <span class="expenses__number">15 000 руб.</span></p>
         </div>
         <div class="example__images">
           <div class="example__image">
             <picture>
               <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-before@1x.png 1x, images/cat-before@2x.png 2x">
-              <img class="example__image-after" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png" width="280" height="256" alt="Толстый кот">
+              <img class="example__image-after" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png" width="280" height="256" alt="Форма кота до употребления корма 'Cat energy'.">
             </picture>
           </div>
           <div class="example__image">
             <picture>
               <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-after@1x.png 1x, images/cat-after@2x.png 2x">
-              <img class="example__image-after" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png" width="280" height="256" alt="Худой кот">
+              <img class="example__image-after" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png" width="280" height="256" alt="Форма кота после употребления корма 'Cat energy'.">
             </picture>
           </div>
         </div>
@@ -167,8 +178,11 @@
         </section>
         <div class="main-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="copyright__text">HTML Academy</span>
-            <img class="copyright__image" width="27" height="34" src="images/icons/logo-footer-icon.svg" alt="Логотип HTML Academy.">
+            <picture>
+              <source width="168" height="37" type="image/svg+xml" media="(min-width: 1200px)" srcset="images/html-academy.svg">
+              <source width="168" height="37" type="image/svg+xml" media="(min-width: 768px)" srcset="images/html-academy.svg">
+              <img class="copyright__image" width="280" height="34" src="images/html-academy-mobile.svg" alt="Логотип HTML Academy.">
+            </picture>
           </a>
         </div>
       </div>
