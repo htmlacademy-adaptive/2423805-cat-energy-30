@@ -1,1 +1,26 @@
 /* здесь используйте глобальные переменные */
+
+$white: #ffffff;
+$gray-light: #f2f2f2;
+$gray: #ebebeb;
+$dark: #444444;
+$black-brown: #222222;
+$almost-black: #111111;
+$black: #000000;
+
+$green-light: #68b738;
+$green: #5eaa2f;
+
+$base-color-text: $black;
+$bg-basic-green: $green-light;
+
+// Fonts
+
+$primary-font: "Oswald", "arial", sans-serif;
+$secondary-font: "Lato", "arial", sans-serif;
+
+// Viewport sizes
+
+$tablet-width: 768px;
+$desktop-width: 1400px;
+
