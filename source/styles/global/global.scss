@@ -1,1 +1,9 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее*/
+body {
+  font-family: "Lato","Oswald", "Arial", sans-serif;
+  color: $base-color-text;
+}
+
+a {
+  text-decoration: none;
+}
