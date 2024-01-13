@@ -1,0 +1,26 @@
+.label-icon {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    right: 13px;
+    top: 50%;
+    mask-repeat: no-repeat;
+    mask-size: 20px 20px;
+    background-color: $fifth-color-text;
+    transform: translateY(-50%);
+  }
+
+  &--email::before {
+    mask-image: url("../../images/icons/stack.svg#email-stroke");
+  }
+
+  &--phone::before {
+    mask-image: url("../../images/icons/stack.svg#phone-stroke");
+  }
+}
+

@@ -8,11 +8,23 @@ $black-brown: #222222;
 $almost-black: #111111;
 $black: #000000;
 
-$green-light: #68b738;
-$green: #5eaa2f;
+$green-light:  rgba(104, 183, 56, 0.85);
+$green: #68b738;
+$green-dark: #5eaa2f;
 
 $base-color-text: $black;
+$base-color-text: $dark;
+$second-color-text: $black;
+$third-color-text:$white;
+$fourth-color-text: $almost-black;
+$fifth-color-text: $black-brown;
+
 $bg-basic-green: $green-light;
+$primary-bg-color: $green;
+$primary-bg-color--opacity: rgba($primary-bg-color, 0.85);
+
+$bg-basic-white: $white;
+$secondary-bg-color: $gray-light;
 
 // Fonts
 
@@ -21,6 +33,6 @@ $secondary-font: "Lato", "arial", sans-serif;
 
 // Viewport sizes
 
+$mobile-width-only: 767px;
 $tablet-width: 768px;
-$desktop-width: 1400px;
-
+$desktop-width: 1300px;

@@ -1,0 +1,35 @@
+.field-group {
+  &--details {
+    @media (min-width: $tablet-width) {
+      @include grid;
+    }
+  }
+}
+
+.field-group__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &--contacts {
+    @media (min-width: $desktop-width) {
+      @include grid;
+    }
+  }
+
+  &--additional {
+    @media (min-width: $tablet-width) {
+      @include grid;
+    }
+
+    @media (min-width: $desktop-width) {
+      @include grid (4);
+    }
+  }
+}
+
+.field-group__label {
+  font-family: $primary-font;
+  font-size: 16px;
+  text-transform: uppercase;
+}

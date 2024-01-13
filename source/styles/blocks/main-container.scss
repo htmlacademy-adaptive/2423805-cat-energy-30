@@ -1,25 +1,7 @@
+.main-container {
+  background-color: $bg-basic-white;
+}
+
 .main-container__title {
-  font-family: $primary-font;
-  font-size: 60px;
-  font-weight: 400;
-  line-height: 60px;
-  color: $black;
-  width: 420px;
-}
-
-.main-container__slogan {
-  font-family: $primary-font;
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-
-.main-container__button {
-  font-family: $primary-font;
-  color: $white;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  background-color: $green;
-  padding: 10px 44px;
+  @include main-title;
 }

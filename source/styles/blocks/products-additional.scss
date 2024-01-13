@@ -1,0 +1,6 @@
+.products-additional__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
