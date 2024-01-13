@@ -1,0 +1,44 @@
+.product-card {
+  @media (min-width: $tablet-width) {
+    background-color: $secondary-bg-color;
+  }
+
+  &--additional {
+    background-color: transparent;
+
+    @media (min-width: $tablet-width) {
+      .product-card__container {
+        @include flex-sb;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      @include flex-sb;
+      width: 896px;
+    }
+
+    .product-card__description {
+      @include flex-sb;
+    }
+
+    .product-card__title {
+      line-height: 16px;
+      text-align: center;
+    }
+
+    .product-card__text {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
+  &--more {
+    background-color: transparent;
+  }
+}
+
+.product-card__text {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}

@@ -1,0 +1,21 @@
+.program-form__description {
+  font-family: $primary-font;
+  color: $second-color-text;
+  text-transform: uppercase;
+}
+
+.program-form__legend {
+  line-height: 16px;
+  color: $second-color-text;
+  text-align: center;
+}
+
+.program-form__small {
+  font-size: inherit;
+}
+
+.program-form__container {
+  @media (min-width: $tablet-width) {
+    @include grid;
+  }
+}

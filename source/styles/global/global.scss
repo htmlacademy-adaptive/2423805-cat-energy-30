@@ -1,9 +1,33 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее*/
+
 body {
-  font-family: "Lato","Oswald", "Arial", sans-serif;
+  font-family: "Lato", "Oswald", "Arial", sans-serif;
   color: $base-color-text;
+}
+
+.page__body {
+  font-family: $primary-font;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: $black;
+  background-color: $white;
+  margin: 0 auto;
+  max-width: 1520px;
 }
 
 a {
   text-decoration: none;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+

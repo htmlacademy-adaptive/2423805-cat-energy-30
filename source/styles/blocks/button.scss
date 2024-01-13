@@ -7,4 +7,15 @@
   background-color: $green-light;
   text-align: center;
   padding: 0 53px;
+
+  &--primary {
+    color: $white;
+    background-color: $primary-bg-color;
+  }
+
+  &--secondary {
+    color: $base-color-text;
+    background-color: $secondary-bg-color;
+  }
 }
+
