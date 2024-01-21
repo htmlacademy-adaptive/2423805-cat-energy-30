@@ -1,8 +1,32 @@
+.main-footer {
+  background-color: $secondary-bg-color;
+}
+
 .main-footer__wrapper {
   background-color: $gray-light;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     @include flex-sb;
+    align-items: center;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
+}
+
+.main-footer__logo-text {
+  display: block;
+  width: 128px;
+  margin: 0 auto 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
   }
 }
 
@@ -11,4 +35,72 @@
   line-height: 20px;
   color: inherit;
   text-decoration: none;
+}
+
+.main-footer__social {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.main-footer__text {
+  font-family: $secondary-font;
+  color: $base-color-text;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.main-footer__logo {
+  @include flex-sb;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    gap: 23px;
+  }
+}
+
+.main-footer__academy-logo {
+  display: block;
+  color: $sextuple-bg-color;
+}
+
+.main-footer__link--text {
+  &:hover,
+  &:focus {
+    & ~ .main-footer__link--img {
+      .main-footer__academy-logo {
+        color: $primary-bg-color;
+      }
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    & ~ .main-footer__link--img {
+      .main-footer__academy-logo {
+        color: $primary-bg-color;
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+.main-footer__link--img {
+  &:hover,
+  &:focus {
+    .main-footer__academy-logo {
+      color: $primary-bg-color;
+    }
+  }
+
+  &:active {
+    .main-footer__academy-logo {
+      color: $primary-bg-color;
+      opacity: 0.3;
+    }
+  }
 }

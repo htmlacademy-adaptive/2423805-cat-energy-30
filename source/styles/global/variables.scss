@@ -2,6 +2,12 @@
 
 $white: #ffffff;
 $gray-light: #f2f2f2;
+$gray-darker: #d9d9d9;
+$gray-plus: #d3d3d3;
+$gray-very-darker: #666666;
+$gray-dasty: #eaeaea;
+$gray-shade: #e6e6e6;
+$special_grey: #cdcdcd;
 $gray: #ebebeb;
 $dark: #444444;
 $black-brown: #222222;
@@ -12,19 +18,26 @@ $green-light:  rgba(104, 183, 56, 0.85);
 $green: #68b738;
 $green-dark: #5eaa2f;
 
-$base-color-text: $black;
+$base-color: $white;
+$secondary-color-text: $black;
 $base-color-text: $dark;
-$second-color-text: $black;
 $third-color-text:$white;
 $fourth-color-text: $almost-black;
 $fifth-color-text: $black-brown;
 
+$octonary-bg-color: $gray;
 $bg-basic-green: $green-light;
 $primary-bg-color: $green;
+$quaternary-bg-color: $gray-darker;
+$underline-bg-color: $gray-darker;
+$shade-bg-color: $gray-shade;
+$example-bg-color: $gray-dasty;
+$sextuple-bg-color: $gray-very-darker;
 $primary-bg-color--opacity: rgba($primary-bg-color, 0.85);
 
 $bg-basic-white: $white;
 $secondary-bg-color: $gray-light;
+$septenary-bg-color: $special_grey;
 
 // Fonts
 

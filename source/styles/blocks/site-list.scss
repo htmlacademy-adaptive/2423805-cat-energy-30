@@ -57,6 +57,19 @@
   text-transform: uppercase;
   color: $black;
 
+  &:hover,
+  &:focus {
+    &:not(.site-list__link--current) {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &:not(.site-list__link--current) {
+      opacity: 0.3;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;

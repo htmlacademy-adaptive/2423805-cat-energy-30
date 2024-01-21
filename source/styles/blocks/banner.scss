@@ -1,56 +1,145 @@
-.banner {
-  background-color: $primary-bg-color--opacity;
-  width: 280px;
-  min-height: 290px;
-  background-image: url("../../images/icons/stack.svg#icon-gift");
-  background-size: 78px 80px;
-  background-repeat: no-repeat;
-  background-position-x: 50%;
-  background-position-y: 59px;
-  position: relative;
-  padding: 43px 42px;
-  box-sizing: border-box;
+// .banner {
+//   background-color: $primary-bg-color--opacity;
+//   width: 280px;
+//   min-height: 290px;
+//   background-image: url("../../images/icons/stack.svg#icon-gift");
+//   background-size: 78px 80px;
+//   background-repeat: no-repeat;
+//   background-position-x: 50%;
+//   background-position-y: 59px;
+//   position: relative;
+//   padding: 43px 42px;
+//   box-sizing: border-box;
 
-  @include bg-catalog;
+//   @include bg-catalog;
+
+//   @media (min-width: $tablet-width) {
+//     width: 708px;
+//     min-height: 200px;
+//     background-position-y: 50%;
+//     background-position-x: 57px;
+//     padding: 43px 77px;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     width: 245px;
+//     min-height: 288px;
+//     background-position-y: 56px;
+//     background-position-x: 50%;
+//     padding: 43px 42px;
+//     box-sizing: border-box;
+//   }
+// }
+
+// .banner__text {
+//   font-family: $secondary-font;
+//   color: $third-color-text;
+//   font-size: 16px;
+//   line-height: 20px;
+//   text-align: center;
+//   margin: 0;
+//   margin-top: 143px;
+
+//   @media (min-width: $tablet-width) {
+//     margin-top: 28px;
+//     text-align: left;
+//     width: 170px;
+//     margin-left: auto;
+//     margin-right: 48px;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     text-align: center;
+//     margin: 0 auto;
+//     margin-top: 142px;
+//   }
+// }
+
+.banner {
+  position: relative;
+  padding: 187px 61px 43px 58px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $third-color-text;
+  background-color: #838383;
+  background-image: url("../../images/catalog/banner-cat@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $primary-bg-color--opacity;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    display: block;
+    width: 78px;
+    height: 80px;
+    background-image: url("../../images/icons/stack.svg#icon-gift");
+    transform: translateX(-50%);
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/catalog/banner-cat@2x.jpg");
+    background-size: 280px 290px;
+  }
 
   @media (min-width: $tablet-width) {
-    width: 708px;
-    min-height: 200px;
-    background-position-y: 50%;
-    background-position-x: 57px;
-    padding: 43px 77px;
+    padding: 71px 125px 69px 421px;
+    background-image: url("../../images/catalog/banner-cat-tablet@1x.jpg");
+    background-size: auto;
+
+    &::after {
+      top: 57px;
+      left: 77px;
+      width: 80px;
+      height: 83px;
+      transform: none;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/catalog/banner-cat-tablet@2x.jpg");
+      background-size: 707px 200px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 245px;
-    min-height: 288px;
-    background-position-y: 56px;
-    background-position-x: 50%;
-    padding: 43px 42px;
-    box-sizing: border-box;
+    padding: 185px 42px 43px;
+    background-image: url("../../images/catalog/banner-cat@1x.jpg");
+    background-size: 280px 290px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/catalog/banner-cat@2x.jpg");
+    }
   }
 }
 
 .banner__text {
+
   font-family: $secondary-font;
   color: $third-color-text;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
+
+  position: relative;
   margin: 0;
-  margin-top: 143px;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin-top: 28px;
     text-align: left;
-    width: 170px;
-    margin-left: auto;
-    margin-right: 48px;
   }
 
   @media (min-width: $desktop-width) {
     text-align: center;
-    margin: 0 auto;
-    margin-top: 142px;
   }
 }
