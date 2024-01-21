@@ -1,0 +1,33 @@
+.social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0;
+  padding: 20px 0;
+  list-style: none;
+  border-top: 1px solid $quaternary-bg-color;
+  border-bottom: 1px solid $quaternary-bg-color;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
+.social__icon {
+  display: block;
+  color: $sextuple-bg-color;
+
+  &:hover,
+  &:focus {
+    color: $primary-bg-color;
+  }
+
+  &:active {
+    color: $primary-bg-color;
+    opacity: 0.3;
+  }
+}
+

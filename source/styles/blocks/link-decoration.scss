@@ -1,6 +1,42 @@
 .link-decoration {
-  background-image: url("../../images/icons/stack.svg#icon-arrow");
+  position: relative;
+  display: inline-block;
   background-repeat: no-repeat;
   background-size: 32px 10px;
   background-position: right center;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 15px);
+    width: 32px;
+    height: 16px;
+    background-image: url("../../images/icons/stack.svg#icon-arrow");
+    background-repeat: no-repeat;
+    background-position: center left -8px;
+    transform: translateY(-50%);
+    transition: 0.3s ease;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      background-position: center left;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+
+    font-size: 20px;
+    line-height: 24px;
+
+    &::after {
+      left: calc(100% + 25px);
+    }
+  }
 }

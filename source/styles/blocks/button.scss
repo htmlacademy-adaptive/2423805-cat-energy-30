@@ -1,21 +1,53 @@
 .button {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
   font-family: $primary-font;
   font-size: 16px;
   line-height: 20px;
-  text-transform: uppercase;
-  color: $white;
-  background-color: $green-light;
   text-align: center;
-  padding: 0 53px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 
   &--primary {
-    color: $white;
+    color: $third-color-text;
     background-color: $primary-bg-color;
+
+    &:hover,
+    &:focus {
+      background-color: #5eaa2f;
+    }
+
+    &:active {
+      color: rgba($third-color-text, 0.3);
+      background-color: #5eaa2f;
+    }
   }
 
   &--secondary {
     color: $base-color-text;
     background-color: $secondary-bg-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $octonary-bg-color;
+    }
+  }
+
+  &--card {
+    @media (min-width: $tablet-width) {
+      padding: 10px 20px;
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 }
-

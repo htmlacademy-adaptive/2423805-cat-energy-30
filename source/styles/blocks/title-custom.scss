@@ -1,12 +1,51 @@
 .title-custom {
+  position: relative;
+  width: fit-content;
+  margin: 0;
+  margin-left: -20px;
+  padding: 0 20px;
   font-family: $primary-font;
   font-size: 24px;
   line-height: 24px;
-  color: $second-color-text;
+  font-weight: 400;
+  color: $secondary-color-text;
   text-align: center;
+  background-color: $base-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 17px;
+    right: 0;
+    width: 100vw;
+    height: 2px;
+    background-color: $primary-bg-color;
+    box-shadow: 100vw 0 0 #68b738;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    padding: 0 40px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      top: 24px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      top: 25px;
+    }
+  }
 
   &--form {
-    line-height: 26px;
     text-align: left;
+
+    @media (max-width: $mobile-width-only) {
+      line-height: 26px;
+    }
   }
 }

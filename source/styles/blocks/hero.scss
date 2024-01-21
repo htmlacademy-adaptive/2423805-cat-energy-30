@@ -22,9 +22,6 @@
   position: relative;
   width: 100%;
   min-height: 302px;
-  // background-color: $green-light;
-
-  // @include bg-index;
 
   @media (min-width: $tablet-width) {
     background-color: $white;
@@ -77,16 +74,26 @@
   text-transform: uppercase;
   background-color: $green;
   padding: 10px 44px;
+
+  @media (min-width: $tablet-width) {
+    z-index: 1;
+    order: 2;
+    min-width: 244px;
+    width: 32%;
+    // margin-left: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 224px;
+    // margin-left: 80px;
+  }
 }
 
 .hero__picture {
   @media (min-width: $desktop-width) {
     position: relative;
-    // background-color: $bg-basic-green;
     width: 100%;
     min-height: 694px;
-
-    // @include bg-index;
   }
 }
 

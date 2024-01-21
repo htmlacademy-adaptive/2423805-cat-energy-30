@@ -1,11 +1,36 @@
+.catalog__title {
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 84px;
+  }
+}
+
 .catalog__list {
+  position: relative;
   margin: 0;
   padding: 0;
   list-style: none;
 
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: $octonary-bg-color;
+    box-shadow: 100vw 0 0 $octonary-bg-color;
+  }
+
   @media (min-width: $tablet-width) {
     @include grid;
     gap: 60px;
+    align-items: end;
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
