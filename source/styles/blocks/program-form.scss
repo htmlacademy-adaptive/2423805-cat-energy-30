@@ -1,21 +1,41 @@
-.program-form__description {
-  font-family: $primary-font;
-  color: $secondary-color-text;
-  text-transform: uppercase;
-}
+.program-form__intro {
+  margin-bottom: 39px;
 
-.program-form__legend {
-  line-height: 16px;
-  color: $secondary-color-text;
-  text-align: center;
-}
-
-.program-form__small {
-  font-size: inherit;
-}
-
-.program-form__container {
   @media (min-width: $tablet-width) {
-    @include grid;
+    margin-bottom: 66px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.program-form__title {
+  margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
+  }
+}
+
+.program-form__description {
+  margin: 0;
+  font-family: $secondary-font;
+  color: $second-color-text;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    width: 323px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 323px;
   }
 }

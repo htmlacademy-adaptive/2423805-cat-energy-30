@@ -48,15 +48,10 @@
 }
 
 .contacts__address {
-  color: $base-color-text;
-  font-family: $secondary-font;
-  font-size: 14px;
   font-style: normal;
-  font-weight: 400;
   line-height: 20px;
 
   @media (min-width: $tablet-width) {
-    font-size: 16px;
     text-align: right;
     width: 157px;
 

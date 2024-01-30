@@ -1,0 +1,66 @@
+.control {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  border: 1px solid $septenary-bg-color;
+  border-radius: 50%;
+  cursor: pointer;
+  appearance: none;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    transform: translate(-50%, -50%);
+    background-color: $primary-bg-color;
+    border-radius: 50%;
+  }
+
+  &:checked {
+    &::before {
+      content: "";
+    }
+  }
+
+  &:hover,
+  &:focus {
+    border-color: #bababa;
+  }
+
+  &:active,
+  &:disabled {
+    border-color: #bababa;
+    opacity: 0.3;
+  }
+
+  &:disabled ~ label {
+    border-color: #bababa;
+    opacity: 0.3;
+  }
+
+  &--check {
+    border-radius: 0;
+
+    &:checked {
+      background-image: url("../../images/icons/stack.svg#tick");
+      background-position: center;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+
+    &::before {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

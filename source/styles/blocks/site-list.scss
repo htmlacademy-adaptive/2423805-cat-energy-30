@@ -1,61 +1,51 @@
 .site-list {
-  @media (max-width: $tablet-width) {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    left: 0;
-    top: 65px;
-  }
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  border-bottom: 1px solid #e6e6e6;
+  background-color: $base-color;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    max-width: 450px;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 33px;
+    background-color: transparent;
+    border-bottom: none;
   }
+}
 
+.site-list--light {
   @media (min-width: $desktop-width) {
-    max-width: 550px;
+    .site-list__link {
+      color: $third-color-text;
 
-    &--desktop a {
-      color: $white;
+      &--current::after {
+        background-color: $base-color;
+      }
     }
   }
 }
 
 .site-list__item {
-  position: relative;
-
-  @media (max-width: $tablet-width) {
-    width: 100%;
-    min-height: 66px;
-    background-color: $white;
-    // border-top: 1px solid $special-grey-light;
-    text-align: center;
-    padding: 23px 20px;
-    box-sizing: border-box;
-  }
+  border-top: 1px solid $tertiary-bg-color;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    align-items: center;
-    min-height: 50px;
-    margin-right: 33px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    min-height: 59px;
+    border-top: none;
   }
 }
 
 .site-list__link {
+  display: block;
+  padding: 22px 10px 24px;
+  font-family: $secondary-font;
   font-size: 20px;
   line-height: 20px;
+  color: $second-color-text;
   text-transform: uppercase;
-  color: $black;
+  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -71,34 +61,29 @@
   }
 
   @media (min-width: $tablet-width) {
+    padding: 14px 0 12px;
     font-size: 18px;
     line-height: 24px;
-
-    &--current::after {
-      content: "";
-      position: absolute;
-      height: 2px;
-      width: 100%;
-      background: $green;
-      bottom: -1px;
-      left: 50%;
-      transform: translate(-50%);
-    }
   }
 
   @media (min-width: $desktop-width) {
     font-size: 20px;
-    line-height: 30px;
+  }
+}
 
-    &--desktop::after {
+.site-list__link--current {
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    &::after {
       content: "";
       position: absolute;
-      height: 2px;
+      bottom: 0;
+      left: 0;
+      right: 0;
       width: 100%;
-      background: $white;
-      bottom: -1px;
-      left: 50%;
-      transform: translate(-50%);
+      height: 2px;
+      background-color: $primary-bg-color;
     }
   }
 }

@@ -1,0 +1,47 @@
+.field {
+  margin: 0;
+  padding: 14px 15px 13px;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $base-color-text;
+  border: 1px solid #e7e7e7;
+  border-radius: 0;
+  appearance: textfield;
+
+  &::placeholder {
+    color: $base-color-text;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $septenary-bg-color;
+  }
+
+  &:focus:invalid {
+    border-color: $error-color;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &--textarea {
+    display: block;
+    width: 100%;
+    min-height: 150px;
+    resize: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 20px;
+    font-size: 20px;
+    line-height: normal;
+
+    &--textarea {
+      min-height: 175px;
+    }
+  }
+}
