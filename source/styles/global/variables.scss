@@ -1,51 +1,26 @@
 /* здесь используйте глобальные переменные */
+$primary-font: "Lato", "Arial", sans-serif;
+$secondary-font: "Oswald", "Arial", sans-serif;
 
-$white: #ffffff;
-$gray-light: #f2f2f2;
-$gray-darker: #d9d9d9;
-$gray-plus: #d3d3d3;
-$gray-very-darker: #666666;
-$gray-dasty: #eaeaea;
-$gray-shade: #e6e6e6;
-$special_grey: #cdcdcd;
-$gray: #ebebeb;
-$dark: #444444;
-$black-brown: #222222;
-$almost-black: #111111;
-$black: #000000;
+$base-color-text: #444444;
+$second-color-text: #000000;
+$third-color-text: #ffffff;
+$fourth-color-text: #111111;
+$fifth-color-text: #222222;
+$sixth-color-text: #f2f2f2;
 
-$green-light:  rgba(104, 183, 56, 0.85);
-$green: #68b738;
-$green-dark: #5eaa2f;
-
-$base-color: $white;
-$secondary-color-text: $black;
-$base-color-text: $dark;
-$third-color-text:$white;
-$fourth-color-text: $almost-black;
-$fifth-color-text: $black-brown;
-
-$octonary-bg-color: $gray;
-$bg-basic-green: $green-light;
-$primary-bg-color: $green;
-$quaternary-bg-color: $gray-darker;
-$underline-bg-color: $gray-darker;
-$shade-bg-color: $gray-shade;
-$example-bg-color: $gray-dasty;
-$sextuple-bg-color: $gray-very-darker;
+$base-color: #ffffff;
+$primary-bg-color: #68b738;
 $primary-bg-color--opacity: rgba($primary-bg-color, 0.85);
+$secondary-bg-color: #f2f2f2;
+$tertiary-bg-color: #e6e6e6;
+$quaternary-bg-color: #d9d9d9;
+$quinary-bg-color: #eaeaea;
+$sextuple-bg-color: #666666;
+$septenary-bg-color: #cdcdcd;
+$octonary-bg-color: #ebebeb;
+$error-color: #ff8282;
 
-$bg-basic-white: $white;
-$secondary-bg-color: $gray-light;
-$septenary-bg-color: $special_grey;
-
-// Fonts
-
-$primary-font: "Oswald", "arial", sans-serif;
-$secondary-font: "Lato", "arial", sans-serif;
-
-// Viewport sizes
-
-$mobile-width-only: 767px;
 $tablet-width: 768px;
-$desktop-width: 1300px;
+$desktop-width: 1440px;
+$mobile-width-only: 767px;

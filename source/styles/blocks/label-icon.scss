@@ -1,26 +1,39 @@
 .label-icon {
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 20px;
-    height: 20px;
-    right: 13px;
-    top: 50%;
-    mask-repeat: no-repeat;
-    mask-size: 20px 20px;
-    background-color: $fifth-color-text;
-    transform: translateY(-50%);
+  &--email {
+    .label-icon__icon {
+      mask-image: url("../../images/icons/stack.svg#email-stroke");
+    }
   }
 
-  &--email::before {
-    mask-image: url("../../images/icons/stack.svg#email-stroke");
+  &--phone {
+    .label-icon__icon {
+      mask-image: url("../../images/icons/stack.svg#phone-stroke");
+    }
   }
 
-  &--phone::before {
-    mask-image: url("../../images/icons/stack.svg#phone-stroke");
+  input:focus ~ .label-icon__icon {
+    background-color: $primary-bg-color;
+  }
+
+  input:focus:invalid ~ .label-icon__icon {
+    background-color: $error-color;
+  }
+
+  input:disabled ~ .label-icon__icon {
+    opacity: 0.3;
   }
 }
 
+.label-icon__icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 13px;
+  top: 50%;
+  mask-repeat: no-repeat;
+  mask-size: 20px 20px;
+  background-color: $fifth-color-text;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,22 @@
+.logo-text {
+  color: $fourth-color-text;
+
+  &:not(.logo-text--index):hover,
+  &:not(.logo-text--index):focus {
+    color: #3e3e3e;
+  }
+
+  &:not(.logo-text--index):active {
+    color: #6b6b6b;
+  }
+
+  &--header {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.logo-text__image {
+  display: block;
+}
