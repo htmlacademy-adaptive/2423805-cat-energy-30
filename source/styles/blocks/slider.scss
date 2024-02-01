@@ -20,7 +20,7 @@
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
-    width: 278px;
+    width: 279px;
   }
 }
 
@@ -30,11 +30,17 @@
   overflow: hidden;
 }
 
-.slider__control-wrapper {
+.slider__control {
   position: absolute;
   left: 50%;
   top: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: transparent;
+  border: none;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -59,7 +65,7 @@
       background-color: $primary-bg-color;
     }
 
-    .slider__control {
+    .slider__icon {
       color: $primary-bg-color;
       border-color: $primary-bg-color;
     }
@@ -70,7 +76,7 @@
   }
 }
 
-.slider__control {
+.slider__icon {
   position: relative;
   z-index: 2;
   display: flex;
@@ -78,10 +84,8 @@
   align-items: center;
   width: 40px;
   height: 40px;
-  padding: 0;
   color: $sextuple-bg-color;
   border: 2px solid $sextuple-bg-color;
   border-radius: 50%;
   background-color: $base-color;
-  cursor: pointer;
 }

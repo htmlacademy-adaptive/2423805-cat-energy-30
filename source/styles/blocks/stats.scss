@@ -34,18 +34,17 @@
 .stats__item {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  min-height: 70px;
   width: 124px;
   margin: 0;
+  padding: 14px 0 17px;
   text-align: center;
   border: 1px solid $septenary-bg-color;
   border-radius: 3px;
 
   @media (min-width: $tablet-width) {
     width: 162px;
-    min-height: 77px;
+    padding: 15px 0 18px;
   }
 }
 
@@ -67,23 +66,27 @@
   z-index: 1;
   top: 100%;
   width: 87px;
-  margin: 0;
   padding: 0 10px;
+  margin: 0;
   font-size: 12px;
   line-height: 12px;
   background-color: $quinary-bg-color;
-  transform: translateY(-50%);
+  transform: translateY(-9px);
 
   @media (min-width: $tablet-width) {
     width: fit-content;
+    max-width: 141px;
+    margin-top: 0;
     padding: 0 8px;
     font-size: 14px;
     line-height: 14px;
     background-color: $base-color;
+    transform: translateY(-7px);
   }
 
   @media (min-width: $desktop-width) {
     background-color: $secondary-bg-color;
+    max-width: none;
   }
 }
 
@@ -91,7 +94,8 @@
   flex-direction: row-reverse;
   gap: 4px;
   width: auto;
-  min-height: auto;
+  padding: 0;
+  text-align: left;
   border: none;
 
   .stats__value {
@@ -102,8 +106,12 @@
     @include stats-price-typography;
     position: static;
     width: auto;
+    min-height: auto;
+    max-height: none;
+    margin: 0;
     padding: 0;
     transform: none;
+    background-color: transparent;
 
     &::after {
       content: ":";
@@ -111,15 +119,22 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-left: auto;
     flex-direction: column-reverse;
     align-items: flex-end;
     gap: 9px;
+    margin-left: auto;
+    width: 200px;
+
+    .stats__definition {
+      max-width: none;
+      text-align: right;
+    }
   }
 
   @media (min-width: $desktop-width) {
     margin-left: 0;
     flex-direction: row-reverse;
-    column-gap: 63px;
+    column-gap: 66px;
+    width: auto;
   }
 }

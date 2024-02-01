@@ -11,6 +11,12 @@
   border: none;
   cursor: pointer;
 
+  &:disabled,
+  &--disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 14px 26px;
     font-size: 20px;
