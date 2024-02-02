@@ -8,36 +8,24 @@
   min-width: 320px;
   min-height: 100%;
   margin: 0;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: $base-color-text;
 
-  // &--index {
-  //   @media (max-width: $mobile-width-only) {
-  //     background-image:
-  //       linear-gradient($primary-bg-color--opacity, $primary-bg-color--opacity 367px, $base-color 367px, $base-color),
-  //       url("../../images/index-background-mobile@1x.jpg"),
-  //       linear-gradient(90deg, #525156, #525156 50%, #414046 50%, #414046);
-  //     background-repeat: no-repeat;
-  //     background-size: auto, auto, 100% 694px;
-  //     background-position: 0 0, top 64px center;
-  //   }
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 
-  //   @media (max-width: $mobile-width-only) and (min-resolution: 2dppx) {
-  //     background-image:
-  //       linear-gradient($primary-bg-color--opacity, $primary-bg-color--opacity 367px, $base-color 367px, $base-color),
-  //       url("../../images/index-background-mobile@2x.jpg"),
-  //       linear-gradient(90deg, #525156, #525156 50%, #414046 50%, #414046);
-  //     background-repeat: no-repeat;
-  //     background-size: auto, 320px 302px, 100% 694px;
-  //     background-position: 0 0, top 64px center;
-  //   }
-  // }
-}
-
-@media (min-width: $desktop-width) {
-  .page__body {
-    &--index {
+  @media (min-width: $desktop-width) {
+    &--custom {
       background-image:
         linear-gradient(-90deg, $primary-bg-color--opacity, $primary-bg-color--opacity 50%, $base-color 50%, $base-color),
-        url("../../images/index-background-desktop@1x.jpg"),
+        image-set(
+          url("../../images/index-background-desktop@1x.webp") type("image/webp"),
+          url("../../images/index-background-desktop@1x.jpg") type("image/jpeg")
+        ),
         linear-gradient(90deg, $base-color, $base-color 50%, #414046 50%, #414046);
       background-repeat: no-repeat;
       background-size: 100% 694px, auto;
@@ -46,7 +34,10 @@
       @media (min-resolution: 2dppx) {
         background-image:
           linear-gradient(-90deg, $primary-bg-color--opacity, $primary-bg-color--opacity 50%, $base-color 50%, $base-color),
-          url("../../images/index-background-desktop@2x.jpg"),
+          image-set(
+            url("../../images/index-background-desktop@2x.webp") type("image/webp"),
+            url("../../images/index-background-desktop@2x.jpg") type("image/jpeg")
+          ),
           linear-gradient(90deg, $base-color, $base-color 50%, #414046 50%, #414046);
         background-size: 100% 694px, 1041px 694px, 100% 693px;
       }
@@ -69,17 +60,3 @@
     }
   }
 }
-
-// background-image:
-// url("../../images/index-background-desktop@1x.jpg"),
-// linear-gradient(90deg, #ffffff, #ffffff 50%, #414046 50%, #414046);
-// background-repeat: no-repeat;
-// background-size: auto, 100% 694px;
-// background-position: calc(50% + 521px) 0, 0 0;
-
-// @media (min-resolution: 2dppx) {
-// background-image:
-//   url("../../images/index-background-desktop@2x.jpg"),
-//   linear-gradient(90deg, #ffffff, #ffffff 50%, #414046 50%, #414046);
-// background-size: 1041px 694px, 100% 694px;
-// }

@@ -1,0 +1,45 @@
+.field-icon {
+  position: relative;
+  flex-grow: 1;
+  width: 100px;
+
+  &--email {
+    .field-icon__icon {
+      mask-image: url("../../images/icons/stack.svg#email-stroke");
+    }
+  }
+
+  &--phone {
+    .field-icon__icon {
+      mask-image: url("../../images/icons/stack.svg#phone-stroke");
+    }
+  }
+
+  input {
+    padding-right: 35px;
+  }
+
+  input:focus ~ .field-icon__icon {
+    background-color: $primary-bg-color;
+  }
+
+  input:focus:invalid ~ .field-icon__icon {
+    background-color: $error-color;
+  }
+
+  input:disabled ~ .field-icon__icon {
+    opacity: 0.3;
+  }
+}
+
+.field-icon__icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 13px;
+  top: 50%;
+  mask-repeat: no-repeat;
+  mask-size: 20px 20px;
+  background-color: $fifth-color-text;
+  transform: translateY(-50%);
+}
