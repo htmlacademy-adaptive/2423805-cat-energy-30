@@ -9,14 +9,13 @@
   line-height: 24px;
   font-weight: 400;
   color: $second-color-text;
-  text-align: center;
   background-color: $base-color;
 
   &::before {
     content: "";
     position: absolute;
     z-index: -1;
-    top: 17px;
+    top: 15px;
     right: 0;
     width: 100vw;
     height: 2px;
@@ -36,8 +35,10 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-left: -40px;
+
     &::before {
-      top: 25px;
+      top: 23px;
     }
   }
 
@@ -46,6 +47,10 @@
 
     @media (max-width: $mobile-width-only) {
       line-height: 26px;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-left: -40px;
     }
   }
 }

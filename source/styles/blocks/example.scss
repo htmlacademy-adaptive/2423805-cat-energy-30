@@ -14,7 +14,7 @@
   @media (min-width: $desktop-width) {
     padding-top: 0;
     padding-bottom: 75px;
-    background-image: linear-gradient(0deg, $secondary-bg-color, $secondary-bg-color 462px, transparent 462px, transparent);
+    background-image: linear-gradient(180deg, transparent, transparent 135px, $secondary-bg-color 135px, $secondary-bg-color);
     border-top: 0;
   }
 }
@@ -22,18 +22,19 @@
 .example__wrapper {
   @media (min-width: $desktop-width) {
     @include flex-sb;
+    align-items: start;
   }
 }
 
 .example__info {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 97px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 436px;
+    width: 433px;
     margin-bottom: 0;
   }
 }
@@ -60,7 +61,16 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 69px;
+    margin-bottom: 67px;
+  }
+}
+
+.example__stats {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
   }
 }
 

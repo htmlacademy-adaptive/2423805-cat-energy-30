@@ -1,5 +1,6 @@
 .control {
   position: relative;
+  flex-shrink: 0;
   width: 30px;
   height: 30px;
   margin: 0;
@@ -12,8 +13,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
     transform: translate(-50%, -50%);
     background-color: $primary-bg-color;
     border-radius: 50%;
@@ -39,6 +40,10 @@
   &:disabled ~ label {
     border-color: #bababa;
     opacity: 0.3;
+  }
+
+  & ~ label {
+    flex-shrink: 1;
   }
 
   &--check {
